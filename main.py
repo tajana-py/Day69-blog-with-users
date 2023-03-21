@@ -183,7 +183,7 @@ def add_new_post():
 
 
 
-@app.route("/edit-post/<int:post_id>")
+@app.route("/edit-post/<int:post_id>", methods=["GET", "POST"])
 @login_required
 @admin_only
 def edit_post(post_id):
